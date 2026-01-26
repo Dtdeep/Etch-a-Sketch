@@ -3,3 +3,16 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.main-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+}
+
+.div-Element{
+    width: 75px;
+    height:75px;
+    background-color: red;
+}
