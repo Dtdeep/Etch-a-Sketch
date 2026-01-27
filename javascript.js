@@ -7,7 +7,10 @@ for(let i = 0; i < 256; i++){
 
 mainContainer.addEventListener("click", (event) => {
     let eventTarget = event.target;
-    console.log(eventTarget);   
+    console.log(eventTarget);  
+    if(eventTarget.class == "div-Element"){
+        eventTarget.classList.add("new-color")
+    }
 })
 
 
