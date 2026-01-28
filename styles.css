@@ -21,9 +21,9 @@ body{
 .div-Element{
     width: 75px;
     height:75px;
-    background-color: red;
+    background-color: #D9CFC7;
 }
 
 .new-color.div-Element{
-    background-color: black;
+    background-color: #C9B59C;
 }

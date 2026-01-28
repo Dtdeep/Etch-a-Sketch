@@ -5,10 +5,10 @@ for(let i = 0; i < 256; i++){
     mainContainer.appendChild(divElement);
 }
 
-mainContainer.addEventListener("click", (event) => {
+mainContainer.addEventListener("mouseover", (event) => {
     let eventTarget = event.target;
     console.log(eventTarget);  
-    if(eventTarget.class == "div-Element"){
+    if(eventTarget.classList == "div-Element"){
         eventTarget.classList.add("new-color")
     }
 })
