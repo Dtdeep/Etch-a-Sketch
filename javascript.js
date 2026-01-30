@@ -1,19 +1,20 @@
 const mainContainer = document.querySelector(".main-container");
-const newGridBtn = document.querySelector("#newGirdBtn");
-let newGridDimension = 256;
+const newGridBtn = document.querySelector("#newGridBtn");
 
-const newGridBtnListener = newGridBtn.addEventListener("click", ()=>{
+const createGrid = (dimension) =>{
+    numberOfBoxes = dimension * dimension;
+    for(let i = 0; i < numberOfBoxes; i++){
+        const divElement = document.createElement("div");
+        divElement.classList.add("div-Element");
+        mainContainer.appendChild(divElement);
+    };
+};
+
+const newGridPromptVar = () => {
     let newGridPrompt = prompt("What will be the new dimension?", 16);
-        newGridDimension = newGridPrompt * newGridPrompt;
-        console.log("it works!");
-});
-
-
-for(let i = 0; i < newGridDimension; i++){
-    const divElement = document.createElement("div");
-    divElement.classList.add("div-Element");
-    mainContainer.appendChild(divElement);
-}
+    createGrid(newGridPrompt);
+    console.log("it works!");
+};
 
 mainContainer.addEventListener("mouseover", (event) => {
     const eventTarget = event.target;
@@ -21,6 +22,12 @@ mainContainer.addEventListener("mouseover", (event) => {
     if(eventTarget.classList == "div-Element"){
         eventTarget.classList.add("new-color")
     }
-})
+});
+
+createGrid(16);
+newGridBtn.addEventListener("click", newGridPromptVar);
+
+
+
 
 
