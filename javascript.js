@@ -8,13 +8,16 @@ const createGrid = (dimension) =>{
         const divElement = document.createElement("div");
         divElement.classList.add("div-Element");
         mainContainer.appendChild(divElement);
-    };()=>{
-
-  node  }
+    }
 }
 
  const removeCurrentGrid = () =>{
-    const allDivElement = document.querySelectorAll("#div-Element");
+    const allDivElement = document.querySelectorAll(".div-Element");
+    let allDivElementArray = [...allDivElement];
+    allDivElementArray.map((node, index)=>{
+        console.log("node list ", node, index);
+        mainContainer.removeChild(node);
+    })  
  }
 
 
