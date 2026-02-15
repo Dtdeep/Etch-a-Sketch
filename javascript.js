@@ -36,9 +36,15 @@ const askNewGridDimensionPromp = () => {
 
 const changeColorWhenHovered = (event) => {
     const eventTarget = event.target;
-    console.log(eventTarget);  
-    if(eventTarget.classList == "div-Element"){
-        eventTarget.classList.add("new-color")
+    let opacity = 10;
+    console.log(eventTarget); 
+    if(eventTarget.classList == "div-Element new-color"){
+        let newOpacity = opacity + 25;
+        eventTarget.style.opacity = `${newOpacity}%`;
+    }else if(eventTarget.classList == "div-Element"){
+        eventTarget.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+        eventTarget.style.opacity = `${opacity}`;
+        eventTarget.classList.add("new-color");
     }
 }
 
